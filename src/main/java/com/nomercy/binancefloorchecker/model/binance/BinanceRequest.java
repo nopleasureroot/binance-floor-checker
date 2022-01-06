@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Data
@@ -22,7 +23,7 @@ public class BinanceRequest {
         private final String nftType = "2";
         private final String orderBy = "amount_sort";
         private final String orderType = "1";
-        private final List<String> serialNo = List.of("159142601537664000");
+        private final List<String> serialNo = Collections.singletonList("159142601537664000");
         private final String tradeType = "0";
     }
 }

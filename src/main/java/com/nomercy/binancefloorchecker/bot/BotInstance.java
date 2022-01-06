@@ -13,6 +13,8 @@ import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
@@ -49,7 +51,7 @@ public class BotInstance extends TelegramLongPollingBot {
                     && update.getMessage().getText() != null)
             {
                 if (update.getMessage().getEntities() != null) {
-                    List<String> splitText = List.of(update.getMessage().getText().split(" "));
+                    List<String> splitText = Arrays.asList(update.getMessage().getText().split(" "));
 
                     if (splitText.size() > 1) {
                         command = splitText.get(0);
