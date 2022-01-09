@@ -1,11 +1,14 @@
 package com.nomercy.binancefloorchecker.model.binance;
 
 import com.nomercy.binancefloorchecker.model.Message;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Setter;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
+@Setter
 public class BinanceMessage extends Message {
     private String image;
+
+    public BinanceMessage(String content, String image) {
+        super(content);
+        this.image = image;
+    }
 }

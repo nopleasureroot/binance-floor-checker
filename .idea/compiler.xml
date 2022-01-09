@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="binance-floor-checker" target="11" />
+      <module name="binance-floor-checker" target="9" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
